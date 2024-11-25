@@ -13,6 +13,7 @@ theme: {
     'text-glow': '0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.7)', // white glow
     'text-glow-yellow': '0 0 10px rgba(249, 212, 35, 0.8), 0 0 20px rgba(249, 212, 35, 0.7)', // yellow glow
     },
+    
 
     borderRadius: {
       lg: 'var(--radius)',
