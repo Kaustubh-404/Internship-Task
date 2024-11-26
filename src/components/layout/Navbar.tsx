@@ -16,7 +16,7 @@ export const Navbar = () => {
     }
   };
 
-  const handleLinkClick = (target) => {
+  const handleLinkClick = (target:string) => {
     setIsMobileMenuOpen(false); // Close the menu
     document.body.style.overflow = 'auto'; // Restore scrolling
 
@@ -30,7 +30,7 @@ export const Navbar = () => {
   return (
     <>
       {/* Desktop Navbar */}
-      <nav className="absolute top-0 left-0 w-full flex justify-between items-center px-6 py-4 z-20 md:flex max-md:hidden bg-transparent">
+      <nav className=" pt-5 absolute top-0 left-0 w-full flex justify-between items-center px-6 py-4 z-20 md:flex max-md:hidden bg-transparent">
         <div className="flex items-center gap-16">
           {/* Logo */}
           <img src={logo} alt="MoonEx" className="pt-2 h-20 w-auto" />
