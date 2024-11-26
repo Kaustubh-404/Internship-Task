@@ -79,7 +79,7 @@ export const Navbar = () => {
         {/* Mobile Menu Overlay */}
         {isMobileMenuOpen && (
           <div
-            className="fixed inset-0 bg-black/80 flex flex-col justify-center items-center space-y-8 z-20 transition-all"
+            className="fixed inset-0 bg-[#0d1c27] flex flex-col justify-center items-center space-y-8 z-20 transition-all"
             style={{ width: '100vw', height: '100vh' }}
           >
             <a
