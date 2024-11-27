@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -30,6 +29,16 @@ body.no-scroll {
  overflow: hidden; /* Prevent scrolling when the menu is open */
 }
 } 
+
+.container {
+  max-width: 100%;
+  overflow: hidden;
+}
+.element {
+  width: 100vw; /* This might be too wide for the screen */
+  box-sizing: border-box;
+}
+
 
 @font-face {
   font-family: 'NeueMachina';

@@ -1,49 +1,56 @@
 import { BsMessenger } from "react-icons/bs";
 import { FaReddit } from "react-icons/fa";
 import { PiBirdFill } from "react-icons/pi";
-import logo from '../../assets/logo.png'
+import logo from "../../assets/logo.png";
 
 const Links = ["About us", "Roadmap", "FAQ", "Contact Us"];
 
 const Footer = () => {
   return (
-    <div className="pt-40 pb-5">
-    <div className="bg-[#051422]  h-[45vh] 2xl:px-10 w-full flex max-lg:flex-col max-lg:gap-8 items-center justify-center">
-      <div className="flex items-center max-lg:flex-col gap-4 2xl:gap-48 max-lg:w-full w-3/4">
-        <img src={logo} alt="logo" className="h-20 w-auto pt-2 " />
-        <div className="lg:gap-20 gap-4 grid max-sm:hidden sm:grid-cols-4">
-          {Links.map((item, index) => (
-            <a
-              className=" text-white text-[1.2rem] whitespace-nowrap capitalize font-medium cursor-pointer hover:text-yellow-500 transition-all ease-in-out duration-200"
-              key={index}
-              href={item === "FAQ" ? "#faqs" : "#"} // Update the FAQ link to scroll to #faqs
-            >
-              {item}
-            </a>
-          ))}
-        </div>
-      </div>
+    <footer className="bg-[#051422] py-10 mt-20 mb-5">
+      <div className="container h-[35vh] mx-auto flex flex-wrap justify-center items-center gap-8 lg:gap-16 px-4">
+        {/* Logo and Links Section */}
+        <div className="flex flex-col items-center lg:flex-row lg:justify-between w-full lg:w-3/4 gap-8">
+          {/* Logo */}
+          <img src={logo} alt="logo" className="h-16 lg:h-20 w-auto" />
 
-      <div className="space-y-5 max-lg:mt-5 -translate-y-10">
-        <button className="py-3 px-7 font-bold text-white text-3xl">
-          Contact <span className="text-yellow-500">Us</span>
-        </button>
-        <div className="flex gap-10 justify-center items-center text-white">
-          <a href="#">
-            <BsMessenger size={30} />
-          </a>
-          <a href="#">
-            <FaReddit size={30} />
-          </a>
-          <a href="#">
-            <PiBirdFill size={30} />
-          </a>
+          {/* Links */}
+          <nav className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+            {Links.map((item, index) => (
+              <a
+                key={index}
+                href={item === "FAQ" ? "#faqs" : "#"}
+                className="text-white text-sm sm:text-base lg:text-lg font-medium capitalize hover:text-yellow-500 transition-colors duration-200"
+              >
+                {item}
+              </a>
+            ))}
+          </nav>
+        </div>
+
+        {/* Contact and Social Media Section */}
+        <div className="flex flex-col items-center gap-6">
+          {/* Contact Button */}
+          <button className="py-3 px-7 font-bold text-white text-xl lg:text-2xl bg-transparent border border-yellow-500 rounded-full hover:bg-yellow-500 hover:text-black transition-all">
+            Contact Us
+          </button>
+
+          {/* Social Icons */}
+          <div className="flex gap-6">
+            <a href="#" className="text-white hover:text-yellow-500 transition">
+              <BsMessenger size={25} />
+            </a>
+            <a href="#" className="text-white hover:text-yellow-500 transition">
+              <FaReddit size={25} />
+            </a>
+            <a href="#" className="text-white hover:text-yellow-500 transition">
+              <PiBirdFill size={25} />
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-    </div>
+    </footer>
   );
 };
 
 export default Footer;
-

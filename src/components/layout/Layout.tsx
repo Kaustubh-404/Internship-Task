@@ -9,10 +9,10 @@ interface LayoutProps {
 export const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="min-h-screen text-white">
-      {/* Navbar (already handled in previous component) */}
+     
       <Navbar />
 
-      {/* Hero Section */}
+     
       <div
         className="relative bg-cover bg-no-repeat min-h-screen"
         style={{
@@ -99,7 +99,7 @@ export const Layout = ({ children }: LayoutProps) => {
         </div>
       </div>
 
-      {/* Additional Content */}
+    
       <main className="relative z-10">{children}</main>
     </div>
   );

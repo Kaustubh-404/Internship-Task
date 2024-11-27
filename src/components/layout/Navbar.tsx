@@ -16,7 +16,7 @@ export const Navbar = () => {
     }
   };
 
-  const handleLinkClick = (target:string) => {
+  const handleLinkClick = (target: string) => {
     setIsMobileMenuOpen(false); // Close the menu
     document.body.style.overflow = 'auto'; // Restore scrolling
 
@@ -30,7 +30,7 @@ export const Navbar = () => {
   return (
     <>
       {/* Desktop Navbar */}
-      <nav className=" pt-5 absolute top-0 left-0 w-full flex justify-between items-center px-6 py-4 z-20 md:flex max-md:hidden bg-transparent">
+      <nav className="pt-5 absolute top-0 left-0 w-full flex justify-between items-center px-6 py-4 z-20 md:flex max-md:hidden bg-transparent">
         <div className="flex items-center gap-16">
           {/* Logo */}
           <img src={logo} alt="MoonEx" className="pt-2 h-20 w-auto" />
@@ -92,14 +92,14 @@ export const Navbar = () => {
             <a
               href="#about"
               className="text-2xl font-bold text-gray-200 hover:text-yellow-400 transition-colors"
-              onClick={() => handleLinkClick('#home')} // Navigates back to Home
+              onClick={() => handleLinkClick('#about')} // Updated to navigate to "About Us"
             >
               About Us
             </a>
             <a
               href="#roadmap"
               className="text-2xl font-bold text-gray-200 hover:text-yellow-400 transition-colors"
-              onClick={() => handleLinkClick('#home')} // Navigates back to Home
+              onClick={() => handleLinkClick('#roadmap')} // Updated to navigate to "Roadmap"
             >
               Roadmap
             </a>
@@ -113,13 +113,13 @@ export const Navbar = () => {
             <a
               href="#contact"
               className="text-2xl font-bold text-gray-200 hover:text-yellow-400 transition-colors"
-              onClick={() => handleLinkClick('#home')} // Navigates back to Home
+              onClick={() => handleLinkClick('#contact')} // Updated to navigate to "Contact Us"
             >
               Contact Us
             </a>
             <button
               className="bg-yellow-400 text-black rounded-full hover:bg-yellow-50 px-10 py-3 text-lg font-bold mt-4"
-              onClick={() => handleLinkClick('#home')} // Navigates back to Home
+              onClick={() => handleLinkClick('#contact')} // Updated to navigate to "Contact Us"
             >
               Connect Wallet
             </button>

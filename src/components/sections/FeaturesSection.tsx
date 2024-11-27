@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import Tilt from 'react-parallax-tilt'; // assuming you're using this for the tilt effect
+import Tilt from 'react-parallax-tilt'; 
 
 const features = [
   {
